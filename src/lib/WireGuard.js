@@ -100,6 +100,10 @@ PreUp = ${WG_PRE_UP}
 PostUp = ${WG_POST_UP}
 PreDown = ${WG_PRE_DOWN}
 PostDown = ${WG_POST_DOWN}
+
+[Peer]
+PublicKey = ${config.server.publicKey}
+AllowedIPs = ${WG_DEFAULT_ADDRESS.replace('x', '0')}/24
 `;
 
     for (const [clientId, client] of Object.entries(config.clients)) {
